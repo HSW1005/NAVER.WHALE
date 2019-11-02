@@ -10,17 +10,6 @@ const option = {
   sort : 'date' //최신순으로 정렬 
 }
 
-var titleArray = new Array();
-var linkArray = new Array(); 
-
-var politics = {title : [], link : []}; //100 
-var economy = {title : [], link : []}; //101
-var society = {title : [], link : []}; //102
-var culture = {title : [], link : []}; //103
-var world = {title : [], link : []}; //104
-var it = {title : [], link : []}; //105
-
-
 //API를 호출하는 함수 
 let callAPI = function() {
     request.get({
@@ -32,6 +21,16 @@ let callAPI = function() {
         }
       }, function(err, res, body) {
           let json = JSON.parse(body) //json으로 파싱
+
+          var titleArray = new Array();
+          var linkArray = new Array(); 
+
+          var politics = {title : [], link : []}; //100 
+          var economy = {title : [], link : []}; //101
+          var society = {title : [], link : []}; //102
+          var culture = {title : [], link : []}; //103
+          var world = {title : [], link : []}; //104
+          var it = {title : [], link : []}; //105
 
           for(let i = 0; i < 100; i++) {
             
@@ -87,13 +86,15 @@ let callAPI = function() {
           const fs = require('fs');
 
           fs.writeFile("newslist.js", result, function(err) {
-          if(err) {
-            return console.log(err);
-          }     
-          console.log("파일에 저장됨"); 
-          }); 
-      
-      })
+            if(err) {
+              return console.log(err);
+            }     
+            console.log("파일에 저장됨"); 
+            });
+          
+
+          }) 
+
 };
 
 callAPI(); 
