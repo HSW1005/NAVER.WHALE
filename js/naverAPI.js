@@ -80,7 +80,7 @@ let callAPI = function() {
 
           //각 카테고리별 결과를 하나의 객체에 저장한다
           var obj = {politics:politics, economy:economy, society:society, culture:culture, world:world, it:it}; 
-          var result = JSON.stringify(obj); 
+          var result = "var result = " + JSON.stringify(obj); 
 
           //fs를 사용하여 객체를 newslist.js에 write한다 
           const fs = require('fs');
