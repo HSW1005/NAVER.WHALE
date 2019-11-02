@@ -35,51 +35,68 @@ let callAPI = function() {
 
           for(let i = 0; i < 100; i++) {
             
-            //전체 속보 기사제목이랑 링크를 각각 배열에 저장 ..
+            //전체 속보 기사제목이랑 링크를 각각 배열에 저장 
             titleArray.push(json.items[i].title);
             linkArray.push(json.items[i].link); 
 
           }
 
           for(let i = 0; i < 100; i++) {
-  
+
             if(linkArray[i].search("=100&") == 58) {
-              politics.title[i] = titleArray[i]; 
-              politics.link[i] = linkArray[i]; 
+        
+              politics.title.push(titleArray[i]);
+              politics.link.push(linkArray[i]);
+        
             } else if(linkArray[i].search("=101&") == 58) {
-              economy.title[i] = titleArray[i]; 
-              economy.link[i] = linkArray[i]; 
+              
+              economy.title.push(titleArray[i]);
+              economy.link.push(linkArray[i]);
+              
             } else if(linkArray[i].search("=102&") == 58) {
-              society.title[i] = titleArray[i]; 
-              society.link[i] = linkArray[i]; 
+              
+              society.title.push(titleArray[i]);
+              society.link.push(linkArray[i]);
+              
             } else if(linkArray[i].search("=103&") == 58) {
-              culture.title[i] = titleArray[i]; 
-              culture.link[i] = linkArray[i]; 
+              
+              culture.title.push(titleArray[i]);
+              culture.link.push(linkArray[i]);
+              
             } else if(linkArray[i].search("=104&") == 58) {
-              world.title[i] = titleArray[i]; 
-              world.link[i] = linkArray[i]; 
+              
+              world.title.push(titleArray[i]);
+              world.link.push(linkArray[i]);
+              
             } else if(linkArray[i].search("=105&") == 58) {
-              it.title[i] = titleArray[i]; 
-              it.link[i] = linkArray[i]; 
+              
+              it.title.push(titleArray[i]);
+              it.link.push(linkArray[i]);
+              
             } else {
               //do nothing
             }
 
           }
-          //확인
-          console.log(politics);
-          console.log(economy);
-          console.log(society);
-          console.log(culture);
-          console.log(world);
-          console.log(it);
-      })
 
+          //각 카테고리별 결과를 하나의 객체에 저장한다
+          var obj = {politics:politics, economy:economy, society:society, culture:culture, world:world, it:it}; 
+          var result = JSON.stringify(obj); 
+
+          //fs를 사용하여 객체를 newslist.js에 write한다 
+          const fs = require('fs');
+
+          fs.writeFile("newslist.js", result, function(err) {
+          if(err) {
+            return console.log(err);
+          }     
+          console.log("파일에 저장됨"); 
+          }); 
       
-            
+      })
 };
 
 callAPI(); 
 
 //5초 간격으로 함수를 실행하여 새로고침 
-//setInterval(callAPI, 5000); 
+setInterval(callAPI, 5000); 
