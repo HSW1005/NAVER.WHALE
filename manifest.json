@@ -1,11 +1,15 @@
 {
-  "name": "Hello World!",
-  "description": "My first Chrome App.",
+  "name": "웬일 - 소식 전하는 고래",
+  "description": "실시간 뉴스를 지속적으로 받아보세요.",
   "version": "0.1",
   "manifest_version": 2,
+  
+  "author": "cod.mon",
+
   "app": {
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["background.js", "newslist.js"],
+      "permissions": ["background"]
     }
   },
   "icons": { "16": "TAVE.png", "128": "TAVE.png" }
