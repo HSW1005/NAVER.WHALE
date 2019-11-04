@@ -12,5 +12,5 @@
       "permissions": ["background"]
     }
   },
-  "icons": { "16": "TAVE.png", "128": "TAVE.png" }
+  "icons": { "16": "icon_whale.png", "128": "icon_whale.png" }
 }

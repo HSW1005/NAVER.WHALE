@@ -7,7 +7,7 @@ var showresult = "";
     //element.innerHTML = "innertext working!";
 
     for (i = 0; i < result.politics.title.length; i++) {
-      showresult += result.politics.title[i] + "";
+      showresult += result.politics.title[i] + "  |  ";
     }
 
     element.innerText = showresult;
