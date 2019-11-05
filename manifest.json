@@ -9,7 +9,7 @@
   "permissions": ["background", "storage"],
 
   "background": {
-    "scripts": ["./js/newsapi.js"]
+    "scripts": ["./js/newsapi.js", "./js/headlines.js"]
   },
 
   "icons": { "16": "icon_whale.png", "128": "icon_whale.png" },
