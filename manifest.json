@@ -6,11 +6,18 @@
   
   "author": "cod.mon",
 
-  "app": {
-    "background": {
-      "scripts": ["background.js", "newslist.js"],
-      "permissions": ["background"]
-    }
+  "permissions": ["background", "storage"],
+
+  "background": {
+    "scripts": ["./js/newsapi.js"]
   },
-  "icons": { "16": "icon_whale.png", "128": "icon_whale.png" }
+
+  "icons": { "16": "icon_whale.png", "128": "icon_whale.png" },
+
+  "sidebar_action": {
+    "default_page": "window.html",
+    "default_icon" : {
+      "16" : "icon_whale.png"
+    }
+  }
 }
