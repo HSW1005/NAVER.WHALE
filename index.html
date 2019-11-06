@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <script src="script.js" defer></script>
   <link href="./css/styles.css" rel="stylesheet">
+  <link href="./css/marquee.css" rel="stylesheet">
+  <link href="./css/mainhtml.css" rel="stylesheet">
+
   <title>Tabs</title>
 </head>
 <header>
   <img src="./png/codmon_whale_icon.jpg" width="30" height="30" class="whale">
-  <h1 id ="maintext">웬일</h1>
+  <h1 id="maintext">웬일</h1>
 </header>
+
+<script type="text/javascript" src="./js/retrievedata.js"></script>
+
 <body>
   <ul class="tabs">
     <li data-tab-target="#breaking" class="active tab"><b>속보</b></li>
@@ -25,7 +32,22 @@
   <div class="tab-content">
     <div id="breaking" data-tab-content class="active">
       <h1>속보</h1>
-      <p>This is the breaking</p>
+      <p>
+        <div id="container_codmon" style="border: 3px solid black;">
+          <div id="inner">
+            <div class="textarea_codmon" style="border: 1px solid transparent">
+              <div class="marquee">
+                <span style="color: white; font-size: 15px;">
+                  <p id="here">Hello world</p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p>
+
+
+      </p>
     </div>
     <div id="business" data-tab-content>
       <h1>비즈니스</h1>
@@ -36,21 +58,22 @@
       <p>Let me tell you about me</p>
     </div>
     <div id="health" data-tab-content>
-        <h1>건강</h1>
-        <p>건강기사</p>
+      <h1>건강</h1>
+      <p>건강기사</p>
     </div>
     <div id="science" data-tab-content>
-        <h1>과학</h1>
-        <p>과학기사</p>
+      <h1>과학</h1>
+      <p>과학기사</p>
     </div>
     <div id="sports" data-tab-content>
-        <h1>스포츠</h1>
-        <p>Let me tell you about me</p>
+      <h1>스포츠</h1>
+      <p>Let me tell you about me</p>
     </div>
     <div id="it" data-tab-content>
-        <h1>it</h1>
-        <p>웬일</p>
+      <h1>it</h1>
+      <p>웬일</p>
     </div>
   </div>
 </body>
+
 </html>
