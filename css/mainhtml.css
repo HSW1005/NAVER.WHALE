@@ -1,8 +1,12 @@
+* {
+  font-family: NanumSquare;
+}
+
 #container_codmon {
   position: absolute;
   background-color: #e8e8e8;
   overflow: hidden;
-  width: 100%;
+  width: 92%;
   height: 52px;
 }
 
@@ -14,7 +18,7 @@
 .buttonarea_codmon{
   position: static;
   float: left;
-  background-color: #e8e8e8;
+  background-color: #b3e5fc;
   width: 7%;
   height: 52px;
 }
@@ -30,7 +34,7 @@
 .opacityarea_codmon{
   position: static;
   float: left;
-  background-color: #e8e8e8;
+  background-color: #81d4fa;
   width:5%;
   height:52px;
 }
@@ -38,7 +42,7 @@
 .closearea_codmon{
   position: static;
   float: left;
-  background-color: #e8e8e8;
+  background-color: #b3e5fc;
   width:5%;
   height:52px;
 }

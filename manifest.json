@@ -12,12 +12,19 @@
     "scripts": ["./js/newsapi.js", "./js/headlines.js"]
   },
 
-  "icons": { "16": "./png/codmon_whale_icon.jpg", "128": "./png/codmon_whale_icon.jpg" },
+  "icons": { "16": "./png/codmon_whale_icon.png", "128": "./png/codmon_whale_icon.png" },
 
   "sidebar_action": {
     "default_page": "index.html",
     "default_icon" : {
-      "16" : "./png/codmon_whale_icon.jpg"
+      "16" : "./png/codmon_whale_icon.png"
     }
-  }
+  },
+
+  "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "css":["./css/marquee.css", "./css/styles.css", "./css/mainhtml.css"],
+      "js": ["./js/retrievedata.js"]
+  }]
+  
 }

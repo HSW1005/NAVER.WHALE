@@ -7,12 +7,21 @@
   <link href="./css/styles.css" rel="stylesheet">
   <link href="./css/marquee.css" rel="stylesheet">
   <link href="./css/mainhtml.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>Tabs</title>
 </head>
+
 <header>
-  <img src="./png/codmon_whale_icon.jpg" width="30" height="30" class="whale">
-  <h1 id="maintext">웬일</h1>
+  <ul class="tabs">
+    <li>
+      <img src="./png/codmon_whale_icon.png" width="50px" height="50px" class="whale">
+    </li>
+    <li>
+      <h1 id="maintext" style="text-align: left; margin-left: 10px;">웬일!? - 소식 전하는 고래</h1>
+    </li>
+  </ul>
+
 </header>
 
 <script type="text/javascript" src="./js/retrievedata.js"></script>
@@ -35,8 +44,8 @@
       <p>
         <div id="container_codmon" style="border: 3px solid black;">
           <div id="inner">
-            <div class="textarea_codmon" style="border: 1px solid transparent">
-              <div class="marquee">
+            <div class="textarea_codmon" style="border: 1px solid transparent; width: 100%">
+              <div class="marquee" style="top: 8%">
                 <span style="color: white; font-size: 15px;">
                   <p id="here">Hello world</p>
                 </span>
