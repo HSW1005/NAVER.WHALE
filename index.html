@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="script.js" defer></script>
+  <link href="styles.css" rel="stylesheet">
+  <title>Tabs</title>
+</head>
+<header>
+    웬일
+</header>
+<body>
+  <ul class="tabs">
+    <li data-tab-target="#breaking" class="active tab"><b>속보</b></li>
+    <li data-tab-target="#business" class="tab"><b>비즈니스</b></li>
+    <li data-tab-target="#entertain" class="tab"><b>연예</b></li>
+    <li data-tab-target="#health" class="tab"><b>건강</b></li>
+    <li data-tab-target="#science" class="tab"><b>과학</b></li>
+    <li data-tab-target="#sports" class="tab"><b>스포츠</b></li>
+    <li data-tab-target="#it" class="tab"><b>it</b></li>
+
+  </ul>
+
+  <div class="tab-content">
+    <div id="breaking" data-tab-content class="active">
+      <h1>속보</h1>
+      <p>This is the breaking</p>
+    </div>
+    <div id="business" data-tab-content>
+      <h1>비즈니스</h1>
+      <p>Some information on pricing</p>
+    </div>
+    <div id="entertain" data-tab-content>
+      <h1>연예</h1>
+      <p>Let me tell you about me</p>
+    </div>
+    <div id="health" data-tab-content>
+        <h1>건강</h1>
+        <p>건강기사</p>
+    </div>
+    <div id="science" data-tab-content>
+        <h1>과학</h1>
+        <p>과학기사</p>
+    </div>
+    <div id="sports" data-tab-content>
+        <h1>스포츠</h1>
+        <p>Let me tell you about me</p>
+    </div>
+    <div id="it" data-tab-content>
+        <h1>it</h1>
+        <p>웬일</p>
+    </div>
+  </div>
+</body>
+</html>
