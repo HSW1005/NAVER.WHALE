@@ -12,12 +12,12 @@
     "scripts": ["./js/newsapi.js", "./js/headlines.js"]
   },
 
-  "icons": { "16": "icon_whale.png", "128": "icon_whale.png" },
+  "icons": { "16": "./png/codmon_whale_icon.jpg", "128": "./png/codmon_whale_icon.jpg" },
 
   "sidebar_action": {
     "default_page": "index.html",
     "default_icon" : {
-      "16" : "icon_whale.png"
+      "16" : "./png/codmon_whale_icon.jpg"
     }
   }
 }

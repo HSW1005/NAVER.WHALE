@@ -1,87 +1,44 @@
 <!DOCTYPE html>
 <html>
 
-        <head>
-        <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/mainhtml.css">
+  <link rel="stylesheet" style type="text/css" href="./css/marquee.css">
 
-          <style type="text/css">
-            .marquee {
-                width:600px;
-                padding:0.5em 0;
-                overflow:hidden;
-                background-color:#f6f6f6;
-                margin-bottom:10px;
-                position:relative;
-            }
- 
-            .marquee p:after {
-                content:"";
-                white-space:nowrap;
-                padding-right:50px;
-            }
- 
-            .marquee p {
-                margin:0;
-                padding-left:600px;
-                display:inline-block;
-                white-space:nowrap;
-                -webkit-animation-name:marquee;
-                -webkit-animation-timing-function:linear;
-                -webkit-animation-duration:30s;
-                -webkit-animation-iteration-count:infinite;
-                -moz-animation-name:marquee;
-                -moz-animation-timing-function:linear;
-                -moz-animation-duration:30s;
-                -moz-animation-iteration-count:infinite;
-                -ms-animation-name:marquee;
-                -ms-animation-timing-function:linear;
-                -ms-animation-duration:30s;
-                -ms-animation-iteration-count:infinite;
-                -o-animation-name:marquee;
-                -o-animation-timing-function:linear;
-                -o-animation-duration:30s;
-                -o-animation-iteration-count:infinite;
-                animation-name:marquee;
-                animation-timing-function:linear;
-                animation-duration:30s;
-                animation-iteration-count:infinite;
-            }
-    
-            @-webkit-keyframes marquee {
-                from   { -webkit-transform: translate(0%);}
-                99%,to { -webkit-transform: translate(-100%);}
-            }
+</head>
 
-            @-moz-keyframes marquee {
-                from   { -moz-transform: translate(0%);}
-                99%,to { -moz-transform: translate(-100%);} 
-            }
+<script type="text/javascript" src="./js/retrievedata.js"></script>
 
-            @-ms-keyframes marquee {
-                from   { -ms-transform: translate(0%);}
-                99%,to { -ms-transform: translate(-100%);}
-            }
+<BODY>
+  <!-- 전체적인 구조 -->
+  <div id="container_codmon" style="border: 3px solid black;">
+    <div id="inner">
+      <!-- 버튼 부분 -->
+        <div class="buttonarea_codmon" style="border: 1px solid transparent;">
+          <a href="http://news.naver.com">
+            <img src="./png/codmon_whale_icon.jpg" style="width: 100%; height:100%; align-content: center;">
+          </a>
+        </div>
+      <!-- 텍스트 MARQUEE 부분 -->
+      <div class="textarea_codmon" style="border: 1px solid transparent">
+        <div class="marquee">
+          <span style="color: white; font-size: 15px;">
+            <p id="here">Hello world</p>
+          </span>
+        </div>
+      </div>
+      <!-- 투명도 조절 부분 -->
+      <div class="opacityarea_codmon" style="border: 1px solid transparent">
+        opacityarea
+      </div>
+      <!-- 닫기 버튼 부분 -->
+      <div class="closearea_codmon" style="border: 1px solid transparent">
+        closebutton
+      </div>
 
-            @-o-keyframes marquee {
-                from   { -o-transform: translate(0%);}
-                99%,to { -o-transform: translate(-100%);}
-            }
-            
-            @keyframes marquee {
-                from   { transform: translate(0%);}
-                99%,to { transform: translate(-100%);}
-            }
+    </div>
+  </div>
+</BODY>
 
-          </style>
-        
-        </head>
-
-        <script type = "text/javascript" src ="./js/retrievedata.js"></script>
-
-        <BODY>
-          <div class = "marquee">
-            <p id = "here">Hello world</p>
-          </div>
-        </BODY>
-        
 </html>

@@ -5,7 +5,7 @@ window.onload = function() {
     var element = document.getElementById("here");
     
         for (i = 0; i < result.headlines.title.length; i++) {
-          showresult += result.headlines.title[i] + "&nbsp&nbsp&nbsp&nbsp  |&nbsp&nbsp&nbsp&nbsp";
+          showresult += result.headlines.title[i] + "&nbsp&nbsp&nbsp&nbsp  |   &nbsp&nbsp&nbsp&nbsp";
         }
     
         element.innerHTML = showresult;

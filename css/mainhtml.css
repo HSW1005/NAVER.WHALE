@@ -1,0 +1,51 @@
+#container_codmon {
+  position: absolute;
+  background-color: #e8e8e8;
+  overflow: hidden;
+  width: 100%;
+  height: 52px;
+}
+
+#inner_codmon {
+  overflow: hidden;
+  width: 100%;
+}
+
+.buttonarea_codmon{
+  position: static;
+  float: left;
+  background-color: #e8e8e8;
+  width: 7%;
+  height: 52px;
+}
+.textarea_codmon{
+  position: static;
+  float: left;
+  background-color: #012769;
+  width: 81.565%;
+  height: 52px;
+  
+}
+
+.opacityarea_codmon{
+  position: static;
+  float: left;
+  background-color: #e8e8e8;
+  width:5%;
+  height:52px;
+}
+
+.closearea_codmon{
+  position: static;
+  float: left;
+  background-color: #e8e8e8;
+  width:5%;
+  height:52px;
+}
+
+#img_location{
+  top: 50%;
+  left: 50%;
+  margin-top:-25px;
+  margin-left:-25px;
+}
