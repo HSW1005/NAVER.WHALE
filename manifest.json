@@ -18,7 +18,8 @@
     "default_page": "index.html",
     "default_icon" : {
       "16" : "./png/codmon_whale_icon.png"
-    }
+    },
+    "default_title" : "웬일 - 소식 전하는 고래"
   },
 
   "content_scripts": [{
