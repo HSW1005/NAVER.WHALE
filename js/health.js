@@ -11,6 +11,6 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&category=health&apiK
         health.link.push(json_health.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({health: health}, function() {console.log('health saved');});
+    //store into whale.storage
+    whale.storage.sync.set({health: health}, function() {console.log('health saved');});
 });

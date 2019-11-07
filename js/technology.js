@@ -11,6 +11,6 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&category=technology&
         technology.link.push(json_technology.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({technology: technology}, function() {console.log('technology saved');});
+    //store into whale.storage
+    whale.storage.sync.set({technology: technology}, function() {console.log('technology saved');});
 });

@@ -11,6 +11,6 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&category=business&ap
         business.link.push(json_business.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({business: business}, function() {console.log('business saved');});
+    //store into whale.storage
+    whale.storage.sync.set({business: business}, function() {console.log('business saved');});
 });

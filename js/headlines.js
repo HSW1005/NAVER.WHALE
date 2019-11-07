@@ -13,7 +13,7 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&apiKey=6e148f857de44
         headlines.link.push(json.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({headlines: headlines}, function() {console.log('headlines saved');});
+    //store into whale.storage
+    whale.storage.sync.set({headlines: headlines}, function() {console.log('headlines saved');});
 });
 

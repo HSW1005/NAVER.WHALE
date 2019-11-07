@@ -11,6 +11,6 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&category=science&api
         science.link.push(json_science.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({science: science}, function() {console.log('science saved');});
+    //store into whale.storage
+    whale.storage.sync.set({science: science}, function() {console.log('science saved');});
 });

@@ -11,6 +11,6 @@ client.get("https://newsapi.org/v2/top-headlines?country=kr&category=sports&apiK
         sports.link.push(json_sports.articles[i].url); 
     }
 
-    //store into chrome.storage
-    chrome.storage.sync.set({sports: sports}, function() {console.log('sports saved');});
+    //store into whale.storage
+    whale.storage.sync.set({sports: sports}, function() {console.log('sports saved');});
 });
