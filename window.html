@@ -6,10 +6,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./css/mainhtml.css">
   <link rel="stylesheet" style type="text/css" href="./css/marquee.css">
+  <link rel="stylesheet" href="chrome-extension://loboidpmlojcalnkgelcncghllmkiico/css/components/overlay-window.css">
 
 </head>
 
-<script type="text/javascript" src="./js/retrievedata.js"></script>
 
 <BODY>
   <!-- 전체적인 구조 -->
@@ -31,15 +31,19 @@
       </div>
       <!-- 투명도 조절 부분 -->
       <div class="opacityarea_codmon" style="border: 2.5px solid white">
-        opacityarea
+          <input id="opacity-bar" type="range" min="1" max="100" style="opacity: 1.3;">
       </div>
       <!-- 닫기 버튼 부분 -->
       <div class="closearea_codmon" style="border: 2.5px solid white">
-        <i class="large material-icons">cancel</i>
+          <span class="window-close" style="opacity: 1.3;">
+            <img alt="오버레이 창 닫기" class="window-close" src="chrome-extension://loboidpmlojcalnkgelcncghllmkiico/img/close.svg" width="20" height="20" style="opacity: 1.3;" id="closebutton">
+          </span>
       </div>
 
     </div>
   </div>
+  <script type="text/javascript" src="./js/overlayclose.js"></script>
+  <script type="text/javascript" src="./js/retrievedata.js"></script>
 </BODY>
 
 </html>
