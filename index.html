@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!--<meta http-equiv="refresh" content="1">-->
   <meta charset="UTF-8">
   <script src="./js/script.js" defer></script>
 
@@ -16,6 +17,8 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--<script type = "text/javascript" src = "./js/reload.js"></script>-->
 
 </head>
 
@@ -54,88 +57,7 @@
   <div class="tab-content">
     <!-- breaking -->
     <div id="breaking" data-tab-content class="active">
-      <ul class="collapsible">
-        <li class="active">
-          <div class="collapsible-header" style="font-size: 18px"><p id='0'></p></div>
-          <div class="collapsible-body" id="brbody1"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="brhead2"><p id='1'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num3"><p id='2'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num4"><p id='3'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num5"><p id='4'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num6"><p id='5'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num7"><p id='6'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num8"><p id='7'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num9"><p id='8'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num10"><p id='9'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num11"><p id='10'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num12"><p id='11'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num13"><p id='12'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num14"><p id='13'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num15"><p id='14'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num16"><p id='15'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num7"><p id='16'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num18"><p id='17'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num19"><p id='18'></p></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header" style="font-size: 18px" id="num20"><p id='19'></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-
+      <ul class="collapsible accordion" id = "headlines_items">
       </ul>
     </div>
 
@@ -662,105 +584,12 @@
 
     <script type="text/javascript" src="./js/overlaybutton.js"></script>
     <script type="text/javascript" src="./js/opensettings.js"></script>
+    <script type="text/javascript" src="./js/additem.js"></script>
     <script type="text/javascript" src="js/materialize.min.js" defer></script>
     <script type="text/javascript" src="./js/collapsiblenav.js" defer></script>
+    
     <!--<script type="text/javascript" src="./js/retrievedata.js" defer></script>-->
 </body>
 
 
 </html>
-
-<!--
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-  </ul>
-
-  <div id="test1" class="col s12">Test 1</div>
-  <div id="test2" class="col s12">Test 2</div>
-  <div id="test3" class="col s12">Test 3</div>
-  <div id="test4" class="col s12">Test 4</div>
-
-
-  <script type="text/javascript" src="./js/materialize.min.js"></script>
-  <script type="text/javascript" src="./js/retrievedata.js"></script>
-</body>
-
--->
-
-
-
-<!--<header>
-  <ul class="tabs">
-    <li>
-      <img src="./png/codmon_whale_icon.png" width="50px" height="50px" class="whale">
-    </li>
-    <li>
-      <h1 id="maintext" style="text-align: left; margin-left: 10px;">웬일!? - 소식 전하는 고래</h1>
-    </li>
-  </ul>
-
-</header>
-
-<script type="text/javascript" src="./js/retrievedata.js"></script>
-
-<body>
-  <ul class="tabs">
-    <li data-tab-target="#breaking" class="active tab"><b>속보</b></li>
-    <li data-tab-target="#business" class="tab"><b>비즈니스</b></li>
-    <li data-tab-target="#entertain" class="tab"><b>연예</b></li>
-    <li data-tab-target="#health" class="tab"><b>건강</b></li>
-    <li data-tab-target="#science" class="tab"><b>과학</b></li>
-    <li data-tab-target="#sports" class="tab"><b>스포츠</b></li>
-    <li data-tab-target="#it" class="tab"><b>IT</b></li>
-
-  </ul>
-
-  <div class="tab-content">
-    <div id="breaking" data-tab-content class="active">
-      <h1>속보</h1>
-      <p>
-        <div id="container_codmon" style="border: 3px solid black;">
-          <div id="inner">
-            <div class="textarea_codmon" style="border: 1px solid transparent; width: 100%">
-              <div class="marquee" style="top: 8%">
-                <span style="color: white; font-size: 15px;">
-                  <p id="here">Hello world</p>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </p>
-
-
-      </p>
-    </div>
-    <div id="business" data-tab-content>
-      <h1>비즈니스</h1>
-      <p>Some information on pricing</p>
-    </div>
-    <div id="entertain" data-tab-content>
-      <h1>연예</h1>
-      <p>Let me tell you about me</p>
-    </div>
-    <div id="health" data-tab-content>
-      <h1>건강</h1>
-      <p>건강기사</p>
-    </div>
-    <div id="science" data-tab-content>
-      <h1>과학</h1>
-      <p>과학기사</p>
-    </div>
-    <div id="sports" data-tab-content>
-      <h1>스포츠</h1>
-      <p>Let me tell you about me</p>
-    </div>
-    <div id="it" data-tab-content>
-      <h1>it</h1>
-      <p>웬일</p>
-    </div>
-  </div>
-</body>
--->

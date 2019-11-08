@@ -2,7 +2,7 @@ var showresult = "";
 
 window.onload = function() {
 
-  chrome.storage.sync.get(null, function(items) {
+  chrome.storage.local.get(null, function(items) {
     
     var allKeys = Object.keys(items);
     allKeys.forEach(function(key, index) {

@@ -7,7 +7,7 @@ var science_settings = document.getElementById("science_settings");
 var sports_settings = document.getElementById("sports_settings");
 var technology_settings = document.getElementById("technology_settings");
 
-chrome.storage.sync.get('user_headlines', function(result) {
+chrome.storage.local.get('user_headlines', function(result) {
     if(result.user_headlines.value == 1) { 
         headlines_settings.checked = true;
     } else {
@@ -15,7 +15,7 @@ chrome.storage.sync.get('user_headlines', function(result) {
     }
 });
 
-chrome.storage.sync.get('user_business', function(result) {
+chrome.storage.local.get('user_business', function(result) {
     if(result.user_business.value == 1) { 
         business_settings.checked = true;
     } else {
@@ -23,7 +23,7 @@ chrome.storage.sync.get('user_business', function(result) {
     }
 }); 
 
-chrome.storage.sync.get('user_entertainment', function(result) {
+chrome.storage.local.get('user_entertainment', function(result) {
     if(result.user_entertainment.value == 1) { 
         entertainment_settings.checked = true;
     } else {
@@ -31,7 +31,7 @@ chrome.storage.sync.get('user_entertainment', function(result) {
     }
 });
 
-chrome.storage.sync.get('user_health', function(result) {
+chrome.storage.local.get('user_health', function(result) {
     if(result.user_health.value == 1) { 
         health_settings.checked = true;
     } else {
@@ -39,7 +39,7 @@ chrome.storage.sync.get('user_health', function(result) {
     }
 });
 
-chrome.storage.sync.get('user_science', function(result) {
+chrome.storage.local.get('user_science', function(result) {
     if(result.user_science.value == 1) { 
         science_settings.checked = true;
     } else {
@@ -47,7 +47,7 @@ chrome.storage.sync.get('user_science', function(result) {
     }
 });
 
-chrome.storage.sync.get('user_sports', function(result) {
+chrome.storage.local.get('user_sports', function(result) {
     if(result.user_sports.value == 1) { 
         sports_settings.checked = true;
     } else {
@@ -55,7 +55,7 @@ chrome.storage.sync.get('user_sports', function(result) {
     }
 });
 
-chrome.storage.sync.get('user_technology', function(result) {
+chrome.storage.local.get('user_technology', function(result) {
     if(result.user_technology.value == 1) { 
         technology_settings.checked = true;
     } else {
@@ -82,24 +82,24 @@ headlines_settings.addEventListener('change', (event) =>{
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({headlines: headlines}, function() {
+            chrome.storage.local.set({headlines: headlines}, function() {
                 console.log('headlines saved');
             });
 
         }); 
 
         var user_headlines = {value:1}; 
-        chrome.storage.sync.set({user_headlines: user_headlines}, function() {
+        chrome.storage.local.set({user_headlines: user_headlines}, function() {
             console.log('user headlines saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('headlines', function() {
+        chrome.storage.local.remove('headlines', function() {
             console.log("headlines removed");
         }); 
 
         var user_headlines = {value:0}; 
-        chrome.storage.sync.set({user_headlines: user_headlines}, function() {
+        chrome.storage.local.set({user_headlines: user_headlines}, function() {
             console.log('user headlines saved to 0');
         });
     } 
@@ -124,23 +124,23 @@ business_settings.addEventListener('change', (event) =>{
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({business: business}, function() {
+            chrome.storage.local.set({business: business}, function() {
                 console.log('business saved');
             });
         }); 
 
         var user_business = {value:1}; 
-        chrome.storage.sync.set({user_business: user_business}, function() {
+        chrome.storage.local.set({user_business: user_business}, function() {
             console.log('user business saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('business', function() {
+        chrome.storage.local.remove('business', function() {
             console.log("business removed");
         }); 
 
         var user_business = {value:0}; 
-        chrome.storage.sync.set({user_business: user_business}, function() {
+        chrome.storage.local.set({user_business: user_business}, function() {
             console.log('user business saved to 0');
         });     
     } 
@@ -164,21 +164,21 @@ entertainment_settings.addEventListener('change', (event) => {
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({entertainment: entertainment}, function() {
+            chrome.storage.local.set({entertainment: entertainment}, function() {
                 console.log('entertainment saved');
             });
         });
         var user_entertainment = {value:1}; 
-        chrome.storage.sync.set({user_entertainment: user_entertainment}, function() {
+        chrome.storage.local.set({user_entertainment: user_entertainment}, function() {
             console.log('user entertainment saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('entertainment', function() {
+        chrome.storage.local.remove('entertainment', function() {
             console.log("entertainment removed");
         }); 
         var user_entertainment = {value:0}; 
-        chrome.storage.sync.set({user_entertainment: user_entertainment}, function() {
+        chrome.storage.local.set({user_entertainment: user_entertainment}, function() {
             console.log('user entertainment saved to 0');
         });
     }
@@ -202,21 +202,21 @@ health_settings.addEventListener('change', (event) => {
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({health: health}, function() {
+            chrome.storage.local.set({health: health}, function() {
                 console.log('health saved');
             });
         });
         var user_health = {value:1}; 
-        chrome.storage.sync.set({user_health: user_health}, function() {
+        chrome.storage.local.set({user_health: user_health}, function() {
             console.log('user health saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('health', function() {
+        chrome.storage.local.remove('health', function() {
             console.log("health removed");
         }); 
         var user_health = {value:0}; 
-        chrome.storage.sync.set({user_health: user_health}, function() {
+        chrome.storage.local.set({user_health: user_health}, function() {
             console.log('user health saved to 0');
         });
     }
@@ -240,21 +240,21 @@ science_settings.addEventListener('change', (event) => {
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({science: science}, function() {
+            chrome.storage.local.set({science: science}, function() {
                 console.log('science saved');
             });
         });
         var user_science = {value:1}; 
-        chrome.storage.sync.set({user_science: user_science}, function() {
+        chrome.storage.local.set({user_science: user_science}, function() {
             console.log('user science saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('science', function() {
+        chrome.storage.local.remove('science', function() {
             console.log("science removed");
         }); 
         var user_science = {value:0}; 
-        chrome.storage.sync.set({user_science: user_science}, function() {
+        chrome.storage.local.set({user_science: user_science}, function() {
             console.log('user science saved to 0');
         });
     }
@@ -278,21 +278,21 @@ sports_settings.addEventListener('change', (event) => {
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({sports: sports}, function() {
+            chrome.storage.local.set({sports: sports}, function() {
                 console.log('sports saved');
             });
         });
         var user_sports = {value:1}; 
-        chrome.storage.sync.set({user_sports: user_sports}, function() {
+        chrome.storage.local.set({user_sports: user_sports}, function() {
             console.log('user sports saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('sports', function() {
+        chrome.storage.local.remove('sports', function() {
             console.log("sports removed");
         });
         var user_sports = {value:0}; 
-        chrome.storage.sync.set({user_sports: user_sports}, function() {
+        chrome.storage.local.set({user_sports: user_sports}, function() {
             console.log('user sports saved to 0');
         }); 
     }
@@ -316,21 +316,21 @@ technology_settings.addEventListener('change', (event) => {
             }
 
             //store into chrome.storage
-            chrome.storage.sync.set({technology: technology}, function() {
+            chrome.storage.local.set({technology: technology}, function() {
                 console.log('technology saved');
             });
         });
         var user_technology = {value:1}; 
-        chrome.storage.sync.set({user_technology: user_technology}, function() {
+        chrome.storage.local.set({user_technology: user_technology}, function() {
             console.log('user technology saved to 1');
         });
     } else {
         //remove from chrome.storage
-        chrome.storage.sync.remove('technology', function() {
+        chrome.storage.local.remove('technology', function() {
             console.log("technology removed");
         }); 
         var user_technology = {value:0}; 
-        chrome.storage.sync.set({user_technology: user_technology}, function() {
+        chrome.storage.local.set({user_technology: user_technology}, function() {
             console.log('user technology saved to 0');
         });
     }

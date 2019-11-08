@@ -15,31 +15,31 @@ var user_science = {value:0};
 var user_sports = {value:0};
 var user_technology = {value:0};
 
-chrome.storage.sync.set({user_headlines:user_headlines}, function() {
+chrome.storage.local.set({user_headlines:user_headlines}, function() {
     console.log('user headlines set');
 });
 
-chrome.storage.sync.set({user_business:user_business}, function() {
+chrome.storage.local.set({user_business:user_business}, function() {
     console.log('user business set');
 });
 
-chrome.storage.sync.set({user_entertainment:user_entertainment}, function() {
+chrome.storage.local.set({user_entertainment:user_entertainment}, function() {
     console.log('user entertainment set');
 });
 
-chrome.storage.sync.set({user_health:user_health}, function() {
+chrome.storage.local.set({user_health:user_health}, function() {
     console.log('user health set');
 });
 
-chrome.storage.sync.set({user_science:user_science}, function() {
+chrome.storage.local.set({user_science:user_science}, function() {
     console.log('user science set');
 });
 
-chrome.storage.sync.set({user_sports:user_sports}, function() {
+chrome.storage.local.set({user_sports:user_sports}, function() {
     console.log('user sports set');
 });
 
-chrome.storage.sync.set({user_technology:user_technology}, function() {
+chrome.storage.local.set({user_technology:user_technology}, function() {
     console.log('user technology set');
 });
 
