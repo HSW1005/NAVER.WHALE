@@ -6,7 +6,7 @@
   
   "author": "cod.mon",
 
-  "permissions": ["background", "storage"],
+  "permissions": ["background", "storage", "tabs", "activeTab"],
 
   "background": {
     "scripts": ["./js/newsapi.js", "./js/default.js"]
@@ -25,7 +25,7 @@
   "content_scripts": [{
       "matches": ["http://*/*", "https://*/*"],
       "css":["./css/marquee.css", "./css/styles.css", "./css/mainhtml.css"],
-      "js": ["./js/retrievedata.js"]
+      "js": ["./js/contentscripts.js"]
   }]
   
 }
