@@ -1,4 +1,4 @@
-//기사를 꺼내와서 array에 저장
+//title
 var headlines_list = [];
 var business_list = [];
 var entertainment_list = [];
@@ -6,6 +6,33 @@ var health_list = [];
 var science_list = [];
 var sports_list = [];
 var technology_list = []; 
+
+//image
+var headlines_image = [];
+var business_image = [];
+var entertainment_image = [];
+var health_image = [];
+var science_image = [];
+var sports_image = [];
+var technology_image = []; 
+
+//description
+var headlines_des = [];
+var business_des = [];
+var entertainment_des = [];
+var health_des = [];
+var science_des = [];
+var sports_des = [];
+var technology_des = []; 
+
+//link
+var headlines_url = [];
+var business_url = [];
+var entertainment_url = [];
+var health_url = [];
+var science_url = [];
+var sports_url = [];
+var technology_url = []; 
 
 window.onload = function() {
 
@@ -16,6 +43,9 @@ window.onload = function() {
         if(key == 'headlines') {
             for (i = 0; i < items.headlines.title.length; i++) {
                 headlines_list.push(items.headlines.title[i]);
+                headlines_image.push(items.headlines.urlToImage[i]);
+                headlines_des.push(items.headlines.description[i]); 
+                headlines_url.push(items.headlines.link[i]);
                 console.log("items added to array");
             }
 
@@ -32,11 +62,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", headlines_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = headlines_des[i];
+              des.href = headlines_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
 
@@ -47,6 +82,9 @@ window.onload = function() {
         else if(key == 'business') {
           for (i = 0; i < items.business.title.length; i++) {
             business_list.push(items.business.title[i]);
+            business_image.push(items.business.urlToImage[i]);
+            business_des.push(items.business.description[i]); 
+            business_url.push(items.business.link[i]);
           }
 
           var business_items = document.getElementById("business_items"); 
@@ -62,11 +100,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", business_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = business_des[i];
+              des.href = business_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -76,6 +119,9 @@ window.onload = function() {
         else if(key == 'entertainment') {
           for (i = 0; i < items.entertainment.title.length; i++) {
             entertainment_list.push(items.entertainment.title[i]);
+            entertainment_image.push(items.entertainment.urlToImage[i]);
+            entertainment_des.push(items.entertainment.description[i]); 
+            entertainment_url.push(items.entertainment.link[i]);
           }
 
           var entertainment_items = document.getElementById("entertainment_items"); 
@@ -91,11 +137,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", entertainment_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = entertainment_des[i];
+              des.href = entertainment_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -106,6 +157,9 @@ window.onload = function() {
         else if(key == 'health') {
           for (i = 0; i < items.health.title.length; i++) {
             health_list.push(items.health.title[i]);
+            health_image.push(items.health.urlToImage[i]);
+            health_des.push(items.health.description[i]); 
+            health_url.push(items.health.link[i]);
           }
 
           var health_items = document.getElementById("health_items"); 
@@ -121,11 +175,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", health_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = health_des[i];
+              des.href = health_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -135,6 +194,9 @@ window.onload = function() {
         else if(key == 'science') {
           for (i = 0; i < items.science.title.length; i++) {
             science_list.push(items.science.title[i]);
+            science_image.push(items.science.urlToImage[i]);
+            science_des.push(items.science.description[i]); 
+            science_url.push(items.science.link[i]);
           }
           var science_items = document.getElementById("science_items"); 
     
@@ -149,11 +211,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", science_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = science_des[i];
+              des.href = science_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -163,6 +230,9 @@ window.onload = function() {
         else if(key == 'sports') {
           for (i = 0; i < items.sports.title.length; i++) {
             sports_list.push(items.sports.title[i]);
+            sports_image.push(items.sports.urlToImage[i]);
+            sports_des.push(items.sports.description[i]); 
+            sports_url.push(items.sports.link[i]);
           }
           var sports_items = document.getElementById("sports_items"); 
     
@@ -177,11 +247,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", sports_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = sports_des[i];
+              des.href = sports_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -191,6 +266,9 @@ window.onload = function() {
         else if(key == 'technology') {
           for (i = 0; i < items.technology.title.length; i++) {
             technology_list.push(items.technology.title[i]);
+            technology_image.push(items.technology.urlToImage[i]);
+            technology_des.push(items.technology.description[i]); 
+            technology_url.push(items.technology.link[i]);
           }
           var technology_items = document.getElementById("technology_items"); 
     
@@ -205,11 +283,16 @@ window.onload = function() {
 
               var div2 = document.createElement("div");
               div2.className = "collapsible-body";
-              var span = document.createElement("span");
-              span.innerHTML = "span"; 
-            
+              var img = document.createElement("img");
+              img.setAttribute("src", technology_image[i]);
+              img.style.width = '100%';
+              var des = document.createElement("a");
+              des.innerHTML = technology_des[i];
+              des.href = technology_url[i];
+
               div.appendChild(p);
-              div2.appendChild(span); 
+              div2.appendChild(img);
+              div2.appendChild(des);
               li.appendChild(div);
               li.appendChild(div2);
               
@@ -218,6 +301,5 @@ window.onload = function() {
         }
         });
     });
-
 }
 
