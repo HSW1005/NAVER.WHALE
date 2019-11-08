@@ -73,6 +73,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = headlines_des[i];
               des.href = headlines_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -116,6 +117,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = business_des[i];
               des.href = business_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -158,6 +160,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = entertainment_des[i];
               des.href = entertainment_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -201,6 +204,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = health_des[i];
               des.href = health_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -242,6 +246,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = science_des[i];
               des.href = science_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -283,6 +288,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = sports_des[i];
               des.href = sports_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
@@ -324,6 +330,7 @@ window.onload = function() {
               var des = document.createElement("a");
               des.innerHTML = technology_des[i];
               des.href = technology_url[i];
+              des.style.fontSize="12px";
 
               div.appendChild(p);
               div2.appendChild(img);
