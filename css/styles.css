@@ -8,6 +8,7 @@
   display: none;
 }
 
+
 .whale {
   float: left;
 }
@@ -27,14 +28,14 @@ body {
   margin: 0;
 }
 
-.tabs {
+.tabs  {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #2DB400;
+  border-bottom: 1px solid #b3e5fc;
 }
 
 .tab {
@@ -44,15 +45,16 @@ body {
 }
 
 .tab.active {
-  background-color: #2DB400;
+  background-color: #b3e5fc;
+  color :#01579b
 }
 
 .tab:hover {
-  background-color: #2DB400;
+  color: #01579b;
+  border-bottom: 3px solid #01579b;
 }
 
 .tab-content {
   margin-left: 20px;
   margin-right: 20px;
 }
-
