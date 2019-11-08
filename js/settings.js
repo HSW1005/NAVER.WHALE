@@ -1,5 +1,4 @@
 //variables
-var mode = document.getElementById("mode");
 var headlines_settings = document.getElementById("headlines_settings");
 var business_settings = document.getElementById("business_settings");
 var entertainment_settings = document.getElementById("entertainment_settings");
@@ -63,16 +62,6 @@ chrome.storage.sync.get('user_technology', function(result) {
         technology_settings.checked = false;
     }
 });
-
-
-//웬일 모드는 나중에 추가 
-mode.addEventListener('change', (event) =>{
-    if(event.target.checked) {
-        alert("mode checked");
-    } else {
-        alert("mode not chekced");
-    }
-}); 
 
 //headlines toggle button 
 headlines_settings.addEventListener('change', (event) =>{
