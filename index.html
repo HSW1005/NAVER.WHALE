@@ -23,23 +23,25 @@
 </head>
 
 <header>
-  <nav class="nav-extended" style="background-color:#b3e5fc">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">웬일!?</a>
+  <nav class="nav-extended" style="background-color:#FFF">
+    <div class="nav-wrapper" style="margin-bottom:20px">
+      <a href="index.html" class="brand-logo" style="color:#012769; font-size: 30px; margin:3px;"><b>웬일 NEWS</b></a>
+     
       <div>
-        <a class="btn-floating btn-large waves-effect waves-light skyblue btn-small"
-          style="float: right; top:15px; margin-right: 15px" id="settingbutton" title="Settings"><i
+        <a class="btn-floating btn-large waves-effect waves-light dark blue btn-small"
+          style="float: right; top:15px; margin-right: 10px;" id="settingbutton" title="Settings"><i
             class="material-icons">settings</i></a>
-        <a class="btn-floating btn-large waves-effect waves-light skyblue btn-small"
-          style="float: right; top:15px; margin-right: 10px" id="overlaybutton" title="ALWAYS mode"><i
-            class="material-icons">airplay</i></button></a>
+        <a class="btn-floating btn-large waves-effect waves-light dark blue btn-small"
+          style="float: right; top:15px;margin-right: 10px;" id="overlaybutton" title="ALWAYS mode"><i
+            class="material-icons">airplay</i></a>
       </div>
+      
     </div>
 
 
     <div class="nav-content" style="padding:15px 0px 0px 0px">
       <ul class="tabs tabs-transparent" style="font-size: 15px">
-        <li data-tab-target="#breaking" class="active tab"><b>속보</b></li>
+        <li data-tab-target="#breaking" class="tab"><b>속보</b></li>
         <li data-tab-target="#business" class="tab"><b>비즈니스</b></li>
         <li data-tab-target="#entertain" class="tab"><b>연예</b></li>
         <li data-tab-target="#health" class="tab"><b>건강</b></li>
@@ -57,7 +59,7 @@
   <div class="tab-content">
     <!-- breaking -->
     <div id="breaking" data-tab-content class="active">
-      <ul class="collapsible accordion" id="headlines_items">
+      <ul class="collapsible popout" id="headlines_items">
       </ul>
     </div>
 
@@ -97,7 +99,7 @@
     </ul>
   </div>
     
-  <script type="text/javascript" src="./js/sidebarbutton.js"></script>
+    <script type="text/javascript" src="./js/sidebarbutton.js"></script>
     <script type="text/javascript" src="./js/overlaybutton.js"></script>
     <script type="text/javascript" src="./js/opensettings.js"></script>
     <script type="text/javascript" src="./js/additem.js"></script>

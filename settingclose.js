@@ -1,7 +1,7 @@
 document.getElementById("settingclosebutton").addEventListener("click", settingclose);
 
 function settingclose(){   
-    setTimeout(close, 1500); 
+    setTimeout(close, 2000); 
 }
 
 function close() {
