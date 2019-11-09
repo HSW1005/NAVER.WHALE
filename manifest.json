@@ -6,10 +6,11 @@
   
   "author": "cod.mon",
 
-  "permissions": ["background", "storage", "tabs", "activeTab"],
+  "permissions": ["background", "storage", "tabs", "activeTab", "http://*/", "https://*/"],
 
   "background": {
-    "scripts": ["./js/newsapi.js", "./js/default.js"]
+    "scripts": ["./js/newsapi.js", "./js/default.js", "./js/background.js"],
+    "persistent": false 
   },
 
   "icons": { "16": "./png/codmon_whale_icon.png", "128": "./png/codmon_whale_icon.png" },
@@ -24,8 +25,9 @@
 
   "content_scripts": [{
       "matches": ["http://*/*", "https://*/*"],
-      "css":["./css/marquee.css", "./css/styles.css", "./css/mainhtml.css"],
-      "js": ["./js/contentscripts.js"]
-  }]
-  
+      "js": ["./js/contentscripts.js"],
+      "all_frames": true
+  }],
+
+  "web_accessible_resources": ["window.html"]
 }

@@ -14,6 +14,7 @@ var user_health = {value:0};
 var user_science = {value:0};
 var user_sports = {value:0};
 var user_technology = {value:0};
+var contentscript = {value:0};
 
 chrome.storage.local.set({user_headlines:user_headlines}, function() {
     console.log('user headlines set');
@@ -41,6 +42,10 @@ chrome.storage.local.set({user_sports:user_sports}, function() {
 
 chrome.storage.local.set({user_technology:user_technology}, function() {
     console.log('user technology set');
+});
+
+chrome.storage.local.set({contentscript:contentscript}, function() {
+    console.log('contentscript set');
 });
 
 

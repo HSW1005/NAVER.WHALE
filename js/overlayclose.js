@@ -1,5 +1,4 @@
 document.getElementById("closebutton").addEventListener("click", overlayclose);
 function overlayclose(){
-
-	window.close();
+	chrome.runtime.sendMessage({action: 'closeWindow'}); 
 }
