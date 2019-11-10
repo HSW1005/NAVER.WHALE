@@ -1,4 +1,5 @@
 document.getElementById("closebutton").addEventListener("click", overlayclose);
 function overlayclose(){
-	whale.runtime.sendMessage({action: 'closeWindow'}); 
+	chrome.runtime.sendMessage({action: 'closeWindow'});
+	window.close("window.html"); 
 }
