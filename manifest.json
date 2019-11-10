@@ -9,7 +9,7 @@
   "permissions": ["background", "storage", "tabs", "activeTab", "http://*/", "https://*/"],
 
   "background": {
-    "scripts": ["./js/newsapi.js", "./js/default.js", "./js/background.js"],
+    "scripts": ["./js/newsapi.js", "./js/default.js", "./js/background.js", "./js/reload.js"],
     "persistent": false 
   },
 
