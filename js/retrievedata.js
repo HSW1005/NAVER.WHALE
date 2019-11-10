@@ -45,5 +45,23 @@ window.onload = function() {
 
   var element = document.getElementById("marqueehere");
   element.innerHTML = showresult;
-  });
+
+  //마퀴 속도 
+  if(element.length < 500) {
+    element.style.cssText = '-webkit-animation-duration:80s; -moz-animation-duration:80s; -ms-animation-duration:80s; -o-animation-duration:80s; animation-duration:80s;';
+  } else if(element.length < 1000) {
+    element.style.cssText = '-webkit-animation-duration:100s; -moz-animation-duration:100s; -ms-animation-duration:100s; -o-animation-duration:100s; animation-duration:100s;';
+  } else if(element.length < 1500) {
+    element.style.cssText = '-webkit-animation-duration:130s; -moz-animation-duration:130s; -ms-animation-duration:130s; -o-animation-duration:130s; animation-duration:130s;';
+  } else if(element.length < 2000) {
+    element.style.cssText = '-webkit-animation-duration:150s; -moz-animation-duration:150s; -ms-animation-duration:150s; -o-animation-duration:150s; animation-duration:150s;';
+  } else if(element.length < 2500) {
+    element.style.cssText = '-webkit-animation-duration:170s; -moz-animation-duration:170s; -ms-animation-duration:170s; -o-animation-duration:170s; animation-duration:170s;';
+  } else if(element.length < 3000) {
+    element.style.cssText = '-webkit-animation-duration:200s; -moz-animation-duration:200s; -ms-animation-duration:200s; -o-animation-duration:200s; animation-duration:200s;';
+  } else {
+    element.style.cssText = '-webkit-animation-duration:300s; -moz-animation-duration:300s; -ms-animation-duration:300s; -o-animation-duration:300s; animation-duration:300s;';
+  }
+  
+  }); 
 }
