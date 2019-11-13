@@ -6,7 +6,7 @@ var updateNews = function() {
           if(key == 'headlines') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json = JSON.parse(response);
     
                 var headlines = {title : [], link : [], description: [], urlToImage: []};
@@ -50,7 +50,7 @@ var updateNews = function() {
           else if(key == 'entertainment') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=entertainment&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=entertainment&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json_entertainment = JSON.parse(response);
     
                 var entertainment = {title : [], link : [], description: [], urlToImage: []};
@@ -69,33 +69,11 @@ var updateNews = function() {
             });
   
           }
-          else if(key == 'health') {
 
-            var client = new HttpClient();
-
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=health&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
-                var json_health = JSON.parse(response);
-
-                var health = {title : [], link : [], description: [], urlToImage: []};
-
-                for(let i = 0; i < json_health.articles.length; i++) {
-                    health.title.push(json_health.articles[i].title);
-                    health.link.push(json_health.articles[i].url); 
-                    health.description.push(json_health.articles[i].description);
-                    health.urlToImage.push(json_health.articles[i].urlToImage); 
-                }
-
-                //store into chrome.storage
-                chrome.storage.local.set({health: health}, function() {
-                    console.log('health updated');
-                });
-            });
-
-          }
           else if(key == 'science') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=science&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=science&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json_science = JSON.parse(response);
     
                 var science = {title : [], link : [], description: [], urlToImage: []};
@@ -117,7 +95,7 @@ var updateNews = function() {
           else if(key == 'sports') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=sports&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=sports&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json_sports = JSON.parse(response);
     
                 var sports = {title : [], link : [], description: [], urlToImage: []};
@@ -139,7 +117,7 @@ var updateNews = function() {
           else if(key == 'technology') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=technology&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=technology&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json_technology = JSON.parse(response);
     
                 var technology = {title : [], link : [], description: [], urlToImage: []};
