@@ -28,7 +28,7 @@ var updateNews = function() {
           else if(key == 'business') {
             var client = new HttpClient();
 
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=business&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=business&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
                 var json_business = JSON.parse(response);
     
                 var business = {title : [], link : [], description: [], urlToImage: []};

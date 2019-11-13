@@ -69,7 +69,7 @@ headlines_settings.addEventListener('change', (event) =>{
         
         var client = new HttpClient();
 
-        client.get("https://newsapi.org/v2/top-headlines?country=kr&apiKey=6e148f857de44a82a3a5c5692f31c2ef", function(response) {
+        client.get("https://newsapi.org/v2/top-headlines?country=kr&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
             var json = JSON.parse(response);
 
             var headlines = {title : [], link : [], description: [], urlToImage: []};
