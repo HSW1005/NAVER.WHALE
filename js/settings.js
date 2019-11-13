@@ -31,15 +31,6 @@ chrome.storage.local.get('user_entertainment', function(result) {
     }
 });
 
-
-chrome.storage.local.get('user_science', function(result) {
-    if(result.user_science.value == 1) { 
-        science_settings.checked = true;
-    } else {
-        science_settings.checked = false;
-    }
-});
-
 chrome.storage.local.get('user_sports', function(result) {
     if(result.user_sports.value == 1) { 
         sports_settings.checked = true;
@@ -177,43 +168,6 @@ entertainment_settings.addEventListener('change', (event) => {
     }
 }); 
 
-//science toggle button
-science_settings.addEventListener('change', (event) => {
-    if(event.target.checked) {
-        var client = new HttpClient();
-
-        client.get("https://newsapi.org/v2/top-headlines?country=kr&category=science&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
-            var json_science = JSON.parse(response);
-
-            var science = {title : [], link : [], description: [], urlToImage: []};
-
-            for(let i = 0; i < json_science.articles.length; i++) {
-                science.title.push(json_science.articles[i].title);
-                science.link.push(json_science.articles[i].url); 
-                science.description.push(json_science.articles[i].description);
-                science.urlToImage.push(json_science.articles[i].urlToImage); 
-            }
-
-            //store into chrome.storage
-            chrome.storage.local.set({science: science}, function() {
-                console.log('science saved');
-            });
-        });
-        var user_science = {value:1}; 
-        chrome.storage.local.set({user_science: user_science}, function() {
-            console.log('user science saved to 1');
-        });
-    } else {
-        //remove from chrome.storage
-        chrome.storage.local.remove('science', function() {
-            console.log("science removed");
-        }); 
-        var user_science = {value:0}; 
-        chrome.storage.local.set({user_science: user_science}, function() {
-            console.log('user science saved to 0');
-        });
-    }
-}); 
 
 //sports toggle button
 sports_settings.addEventListener('change', (event) => {
