@@ -21,16 +21,6 @@ window.onload = function() {
           showresult += items.entertainment.title[i] + "&nbsp&nbsp&nbsp&nbsp  |   &nbsp&nbsp&nbsp&nbsp";
         }
       }
-      else if(key == 'health') {
-        for (i = 0; i < items.health.title.length; i++) {
-          showresult += items.health.title[i] + "&nbsp&nbsp&nbsp&nbsp  |   &nbsp&nbsp&nbsp&nbsp";
-        }
-      }
-      else if(key == 'science') {
-        for (i = 0; i < items.science.title.length; i++) {
-          showresult += items.science.title[i] + "&nbsp&nbsp&nbsp&nbsp  |   &nbsp&nbsp&nbsp&nbsp";
-        }
-      }
       else if(key == 'sports') {
         for (i = 0; i < items.sports.title.length; i++) {
           showresult += items.sports.title[i] + "&nbsp&nbsp&nbsp&nbsp  |   &nbsp&nbsp&nbsp&nbsp";

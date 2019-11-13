@@ -69,29 +69,6 @@ var updateNews = function() {
             });
   
           }
-
-          else if(key == 'science') {
-            var client = new HttpClient();
-
-            client.get("https://newsapi.org/v2/top-headlines?country=kr&category=science&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
-                var json_science = JSON.parse(response);
-    
-                var science = {title : [], link : [], description: [], urlToImage: []};
-    
-                for(let i = 0; i < json_science.articles.length; i++) {
-                    science.title.push(json_science.articles[i].title);
-                    science.link.push(json_science.articles[i].url); 
-                    science.description.push(json_science.articles[i].description);
-                    science.urlToImage.push(json_science.articles[i].urlToImage); 
-                }
-    
-                //store into chrome.storage
-                chrome.storage.local.set({science: science}, function() {
-                    console.log('science updated');
-                });
-            });
-            
-          }
           else if(key == 'sports') {
             var client = new HttpClient();
 

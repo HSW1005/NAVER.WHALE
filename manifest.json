@@ -1,7 +1,7 @@
 {
   "name": "웬일 - 소식 전하는 고래",
   "description": "실시간 뉴스를 지속적으로 받아보세요.",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "manifest_version": 2,
   
   "author": "cod.mon",
@@ -9,7 +9,7 @@
   "permissions": ["background", "storage", "tabs", "activeTab", "http://*/", "https://*/"],
 
   "background": {
-    "scripts": ["./js/newsapi.js", "./js/default.js", "./js/background.js", "./js/reload.js"],
+    "scripts": ["./js/newsapi.js", "./js/background.js", "./js/reload.js"],
     "persistent": false 
   },
 

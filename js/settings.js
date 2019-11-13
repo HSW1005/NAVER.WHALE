@@ -2,49 +2,45 @@
 var headlines_settings = document.getElementById("headlines_settings");
 var business_settings = document.getElementById("business_settings");
 var entertainment_settings = document.getElementById("entertainment_settings");
-var health_settings = document.getElementById("health_settings");
-var science_settings = document.getElementById("science_settings");
 var sports_settings = document.getElementById("sports_settings");
 var technology_settings = document.getElementById("technology_settings");
 
-chrome.storage.local.get('user_headlines', function(result) {
-    if(result.user_headlines.value == 1) { 
-        headlines_settings.checked = true;
-    } else {
-        headlines_settings.checked = false;
-    }
-});
-
-chrome.storage.local.get('user_business', function(result) {
-    if(result.user_business.value == 1) { 
-        business_settings.checked = true;
-    } else {
-        business_settings.checked = false;
-    }
-}); 
-
-chrome.storage.local.get('user_entertainment', function(result) {
-    if(result.user_entertainment.value == 1) { 
-        entertainment_settings.checked = true;
-    } else {
-        entertainment_settings.checked = false;
-    }
-});
-
-chrome.storage.local.get('user_sports', function(result) {
-    if(result.user_sports.value == 1) { 
-        sports_settings.checked = true;
-    } else {
-        sports_settings.checked = false;
-    }
-});
-
-chrome.storage.local.get('user_technology', function(result) {
-    if(result.user_technology.value == 1) { 
-        technology_settings.checked = true;
-    } else {
-        technology_settings.checked = false;
-    }
+chrome.storage.local.get(null, function(items) {
+      
+    var allKeys = Object.keys(items);
+    allKeys.forEach(function(key, index) {
+        if(key == "user_headlines") {
+            if(items.user_headlines.value == 1) { 
+                headlines_settings.checked = true;
+            } else {
+                headlines_settings.checked = false;
+            }
+        } else if(key == "user_business") {
+            if(items.user_business.value == 1) { 
+                business_settings.checked = true;
+            } else {
+                business_settings.checked = false;
+            }
+        } else if(key == "user_entertainment") {
+            if(items.user_entertainment.value == 1) { 
+                entertainment_settings.checked = true;
+            } else {
+                entertainment_settings.checked = false;
+            }
+        } else if(key == "user_sports") {
+            if(items.user_sports.value == 1) { 
+                sports_settings.checked = true;
+            } else {
+                sports_settings.checked = false;
+            }
+        } else if(key == "user_technology") {
+            if(items.user_technology.value == 1) { 
+                technology_settings.checked = true;
+            } else {
+                technology_settings.checked = false;
+            }
+        }
+    });
 });
 
 //headlines toggle button 
