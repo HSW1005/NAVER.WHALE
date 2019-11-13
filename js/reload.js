@@ -1,4 +1,4 @@
-var updateNews = function() {
+var updateHeadlines = function() {
     chrome.storage.local.get(null, function(items) {
       
         var allKeys = Object.keys(items);
@@ -25,7 +25,17 @@ var updateNews = function() {
             });
             
           }
-          else if(key == 'business') {
+        });
+    });
+}
+
+var updateNews = function() {
+    chrome.storage.local.get(null, function(items) {
+      
+        var allKeys = Object.keys(items);
+        allKeys.forEach(function(key, index) {
+
+          if(key == 'business') {
             var client = new HttpClient();
 
             client.get("https://newsapi.org/v2/top-headlines?country=kr&category=business&apiKey=efb433bbf3df46d69b0246e526b8a92a", function(response) {
@@ -117,4 +127,5 @@ var updateNews = function() {
     });
 }
 
-setInterval(updateNews, 15 * 60 * 1000) //update every 15 minutes
+setInterval(updateHeadlines, 15 * 60 * 1000) //update every 15 minutes (headlines)
+setInterval(updateNews, 60 * 60 * 1000) //update every 1 hour (other categories)
