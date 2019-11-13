@@ -31,13 +31,6 @@ chrome.storage.local.get('user_entertainment', function(result) {
     }
 });
 
-chrome.storage.local.get('user_health', function(result) {
-    if(result.user_health.value == 1) { 
-        health_settings.checked = true;
-    } else {
-        health_settings.checked = false;
-    }
-});
 
 chrome.storage.local.get('user_science', function(result) {
     if(result.user_science.value == 1) { 
