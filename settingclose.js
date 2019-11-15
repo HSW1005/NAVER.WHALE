@@ -2,7 +2,7 @@ document.getElementById("settingclosebutton").addEventListener("click", settingc
 
 function settingclose(){   
     setTimeout(close, 3000);
-    window.alert("Loading...")
+    window.alert("LOADING...")
 }
 
 function close() {
