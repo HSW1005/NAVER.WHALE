@@ -1,3 +1,19 @@
+chrome.storage.local.get('contentscript', function(result) {
+  if(typeof result.contentscript == 'undefined') {
+      var property = document.getElementById("overlaybutton");
+      property.style.backgroundColor="rgb(50, 151, 232)";
+  } else {
+    if(result.contentscript.value == 0) { 
+      var property = document.getElementById("overlaybutton");
+      property.style.backgroundColor="rgb(50, 151, 232)";
+    }
+     else {  
+      var property = document.getElementById("overlaybutton");
+      property.style.backgroundColor="black";
+    }
+  }   
+});
+
 //title
 var headlines_list = [];
 var business_list = [];
