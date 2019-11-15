@@ -1,6 +1,6 @@
 {
-  "name": "웬일 - 소식 전하는 고래",
-  "description": "실시간 뉴스를 지속적으로 받아보세요.",
+  "name": "웬일!? NEWS",
+  "description": "웹 페이지에 흘러 나오는 실시간 속보!",
   "version": "1.5.5",
   "manifest_version": 2,
   
@@ -20,7 +20,7 @@
     "default_icon" : {
       "16" : "./png/codmon_whale_icon.png"
     },
-    "default_title" : "웬일 - 소식 전하는 고래"
+    "default_title" : "웬일!? NEWS"
   },
 
   "content_scripts": [{
