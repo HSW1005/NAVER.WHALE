@@ -29,13 +29,13 @@ html, body {
   width: 7%;
   height: 52px;
 }
+
 .textarea_codmon{
   position: static;
   float: left;
   background-color: #012769;
   width: 81.565%;
   height: 52px;
-  
 }
 
 .opacityarea_codmon{

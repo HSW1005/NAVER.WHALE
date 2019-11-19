@@ -36,22 +36,29 @@ window.onload = function() {
   var element = document.getElementById("marqueehere");
   element.innerHTML = showresult;
 
-  //마퀴 속도 
-  if(element.length < 500) {
-    element.style.cssText = '-webkit-animation-duration:80s; -moz-animation-duration:80s; -ms-animation-duration:80s; -o-animation-duration:80s; animation-duration:80s;';
-  } else if(element.length < 1000) {
-    element.style.cssText = '-webkit-animation-duration:100s; -moz-animation-duration:100s; -ms-animation-duration:100s; -o-animation-duration:100s; animation-duration:100s;';
-  } else if(element.length < 1500) {
-    element.style.cssText = '-webkit-animation-duration:130s; -moz-animation-duration:130s; -ms-animation-duration:130s; -o-animation-duration:130s; animation-duration:130s;';
-  } else if(element.length < 2000) {
-    element.style.cssText = '-webkit-animation-duration:150s; -moz-animation-duration:150s; -ms-animation-duration:150s; -o-animation-duration:150s; animation-duration:150s;';
-  } else if(element.length < 2500) {
-    element.style.cssText = '-webkit-animation-duration:170s; -moz-animation-duration:170s; -ms-animation-duration:170s; -o-animation-duration:170s; animation-duration:170s;';
-  } else if(element.length < 3000) {
-    element.style.cssText = '-webkit-animation-duration:200s; -moz-animation-duration:200s; -ms-animation-duration:200s; -o-animation-duration:200s; animation-duration:200s;';
-  } else {
-    element.style.cssText = '-webkit-animation-duration:300s; -moz-animation-duration:300s; -ms-animation-duration:300s; -o-animation-duration:300s; animation-duration:300s;';
-  }
+  //마퀴 속도 조절 
+  var slider = document.getElementById("myRange");
+
+  chrome.storage.local.get('marquee', function(result) {
+    if(typeof result.marquee == 'undefined') { //앱을 처음 설치한 경우 
+      //default value 
+    } else { //그렇지 않은 경우 - 이전 설정값 유지 
+      slider.value = result.marquee.value; 
+      var num = 501 - slider.value; 
+      var text = '-webkit-animation-duration:' + num + 's; -moz-animation-duration:' + num + 's; -ms-animation-duration:' + num + 's; -o-animation-duration:' + num + 's; animation-duration:' + num + 's;';
+      element.style.cssText = text;
+    }   
+  });
   
+  slider.onchange = function() {
+    var num = 501 - slider.value; 
+    var text = '-webkit-animation-duration:' + num + 's; -moz-animation-duration:' + num + 's; -ms-animation-duration:' + num + 's; -o-animation-duration:' + num + 's; animation-duration:' + num + 's;';
+    element.style.cssText = text;
+    var speed = {value:slider.value}; 
+    chrome.storage.local.set({marquee: speed}, function() {
+      console.log('marquee speed set');
+    });
+  }
+
   }); 
 }
